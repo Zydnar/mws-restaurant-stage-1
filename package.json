@@ -1,0 +1,51 @@
+{
+  "name": "mws-restaurant-stage-1",
+  "version": "1.0.0",
+  "description": "Udacity Mobile Web track Challenge app.",
+  "main": "index.js",
+  "repository": "https://github.com/Zydnar/mws-restaurant-stage-1.git",
+  "author": "Zydnar <shirkaen@gmail.com>",
+  "owners": "@forbiddenvoid @richardkalehoff @asparr",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.23.6",
+    "browserify": "^16.1.0",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-noop": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-responsive-images": "^0.0.3",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0"
+  },
+  "babel": {
+    "compact": false,
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
+    ],
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "safari >= 7"
+            ],
+            "useBuiltIns": true
+          }
+        }
+      ]
+    ]
+  }
+}

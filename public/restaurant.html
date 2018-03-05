@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="description" content="Restaurant Reviews working offline.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#252831"/>
+    <!-- Normalize.css for better cross-browser consistency -->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" media="nope!"
+          onload="this.media='all'"/>
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>Restaurant Info</title>
+</head>
+
+<body class="inside">
+<!-- Beginning header -->
+<header>
+    <!-- Beginning nav -->
+    <nav>
+        <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+    <!-- Beginning breadcrumb -->
+    <ul id="breadcrumb">
+        <li><a href="/">Home</a></li>
+    </ul>
+    <!-- End breadcrumb -->
+    <!-- End nav -->
+</header>
+<!-- End header -->
+
+<!-- Beginning main -->
+<main id="maincontent">
+    <!-- Beginning map -->
+    <section id="map-container" role="application">
+        <div id="map"></div>
+    </section>
+    <!-- End map -->
+    <!-- Beginning restaurant -->
+    <section id="restaurant-container">
+        <h1 id="restaurant-name"></h1>
+        <img id="restaurant-img" alt="Restaurant image" src="">
+        <p id="restaurant-cuisine"></p>
+        <p id="restaurant-address"></p>
+        <table id="restaurant-hours"></table>
+    </section>
+    <!-- end restaurant -->
+    <!-- Beginning reviews -->
+    <section id="reviews-container">
+        <ul id="reviews-list"></ul>
+    </section>
+    <!-- End reviews -->
+</main>
+<!-- End main -->
+
+<!-- Beginning footer -->
+<footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+</footer>
+<!-- End footer -->
+
+<!-- Beginning scripts -->
+<!-- Main javascript file -->
+<script type="text/javascript" src="js/main.js"></script>
+<!-- Google Maps -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZyUeaJZv0dXSBsJqALEkJmS5nKRZJDuY&libraries=places&callback=initMap"></script>
+<!-- End scripts -->
+
+</body>
+
+</html>

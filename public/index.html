@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Restaurant Reviews working offline.">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" media="nope!"
+          onload="this.media='all'"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="theme-color" content="#252831"/>
+    <title>Restaurant Reviews</title>
+</head>
+
+<body>
+<header>
+    <nav>
+        <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+</header>
+
+<main id="maincontent">
+    <section id="map-container">
+        <div id="map" role="application"></div>
+    </section>
+    <section id="filter-results">
+        <div class="filter-options">
+            <h2>Filter Results</h2>
+            <label for="neighborhoods-select">Select neighborhoods</label>
+            <select id="neighborhoods-select" name="neighborhoods">
+                <option value="all">All Neighborhoods</option>
+            </select>
+            <label for="cuisines-select">Select cuisines</label>
+            <select id="cuisines-select" name="cuisines">
+                <option value="all">All Cuisines</option>
+            </select>
+        </div>
+        <ul id="restaurants-list"></ul>
+    </section>
+</main>
+
+<script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZyUeaJZv0dXSBsJqALEkJmS5nKRZJDuY&libraries=places&callback=initMap"></script>
+
+
+<footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+</footer>
+
+</body>
+
+</html>
