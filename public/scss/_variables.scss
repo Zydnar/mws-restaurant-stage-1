@@ -1,4 +1,5 @@
 @import "helpers/functions";
+
 $smallest_font: 16px;
 // Based on Foundation for Sites Settings
 // see: https://github.com/zurb/foundation-sites/blob/develop/scss/settings/_settings.scss
@@ -82,7 +83,7 @@ $results_lia_pd_bottom: 10px;
 /* ==============      navigation      ============== */
 
 /* h1 */
-$nav_h1_f_size: convert(14, pt, px); // TODO pt only for print
+$nav_h1_f_size: 1rem; // TODO pt only for print
 $nav_h1_txt_spacing: 10px;
 /* breadcrumb */
 $breadcrumb_pd_top: 10px;

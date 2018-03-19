@@ -128,7 +128,7 @@ export const fillRestaurantsHTML = (restaurants = self.restaurants) => {
         try {
             ul.append(createRestaurantHTML(restaurant));
         } catch (e) {
-            ul.innerHTML += createRestaurantHTML(restaurant).outerHTML
+            ul.innerHTML += createRestaurantHTML(restaurant).outerHTML; // support for MS Edge
         }
     });
     addMarkersToMap();

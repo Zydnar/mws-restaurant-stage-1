@@ -45,13 +45,15 @@
     @include border-radius(15px 0 0 0);
   }
   & li h1 {
-    color: get_map_item($orange, 'deepOrange');
+    color: maroon;
     font-family: Arial, sans-serif;
     font-size: $results_lih1_f_size;
     font-weight: 200;
     letter-spacing: 0;
     line-height: $results_lih1_l_height;
-    margin: $results_lih1_mg_top 0 $results_lih1_mg_bottom;
+    margin: 0;
+    padding: 10px 10px 20px 10px !important;
+    min-height: 79px;
     text-transform: uppercase;
   }
   & p {
@@ -59,11 +61,10 @@
     font-size: $results_lip_f_size;
   }
   & li a {
-    background-color: get_map_item($orange, 'Orange');
+    background-color: maroon;
     border-bottom: 3px solid get_map_item($white, lighterGray);
     color: get_map_item($white, 'White');
     display: table;
-    // TODO check if it's not too small
     font-size: $results_lia_f_size;
     padding: $results_lia_pd_top $results_lia_pd_side $results_lia_pd_bottom;
     text-align: center;
@@ -72,8 +73,5 @@
     margin-left: auto;
     margin-right: auto;
     @include border-radius(3px);
-    &:focus {
-      outline: 1px solid blue;
-    }
   }
 }

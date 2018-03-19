@@ -28,7 +28,7 @@ gulp.task('compass', function () {
 });
 gulp.task('build', function () {
     gulp.src('./src/js/index.js')
-        .pipe(sourcemaps.init())
+        .pipe(isProduction?sourcemaps.init():noop())
         .pipe(
             browserify(
                 {
@@ -38,7 +38,7 @@ gulp.task('build', function () {
         )
         .pipe(isProduction?uglify():noop())
         .pipe(rename('main.js'))
-        .pipe(sourcemaps.write('./'))
+        .pipe(isProduction?sourcemaps.write('./public/js'):noop())
         .pipe(gulp.dest('./public/js'));
 });
 gulp.task('js-watch', ['build'], browserSync.reload);
@@ -54,17 +54,17 @@ gulp.task('responsive-images', function () {
     gulp.src('./public/img/*.jpg')
         .pipe(responsive({
                              '*.jpg': [{
-                                 width: 100,
+                                 width: 266,
                                  suffix: '-100-1x',
-                                 quality: 50
+                                 quality: 100
                              }, {
-                                 width: 100 * 2,
+                                 width: 266 * 2,
                                  suffix: '-100-2x',
-                                 quality: 50
+                                 quality: 10
                              }, {
-                                 width: 100 * 3,
+                                 width: 266 * 3,
                                  suffix: '-100-3x',
-                                 quality: 50
+                                 quality: 10
                              }]
                          }))
         .pipe(gulp.dest('./public/img'));

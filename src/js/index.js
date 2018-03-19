@@ -98,10 +98,10 @@ import DBHelper from "./dbhelper";
                 fetchCuisines();
             });
 
-            cuisinesSelect.addEventListener('change', (event) => {
+            cuisinesSelect.addEventListener('change', () => {
                 updateRestaurants();
             });
-            neighborhoodsSelect.addEventListener('change', (event) => {
+            neighborhoodsSelect.addEventListener('change', () => {
                 updateRestaurants();
             });
             break;

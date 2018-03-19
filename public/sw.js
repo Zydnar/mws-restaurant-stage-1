@@ -15,7 +15,6 @@ let delete_caches = function (event) {
     );
 };
 addEventListener('install', function (event) {
-    console.log('teszt');
     event.waitUntil(
         caches.open(cache_name)
               .then(function (cache) {
@@ -42,6 +41,7 @@ addEventListener('fetch', function (event) {
     event.respondWith(
         caches.match(event.request)
               .then(function (response) {
+                  // comments from Mozilla MDN
                   // caches.match() always resolves
                   // but in case of success response will have value
                   if (response !== void 0) {
