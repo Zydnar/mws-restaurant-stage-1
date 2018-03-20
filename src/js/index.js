@@ -49,14 +49,14 @@ import DBHelper from "./dbhelper";
         }
 
     };
+    /**
+     * Initialize Google map, called from HTML.
+     * @return {function}
+     */
     const setInitMap = (type) => {
-        /**
-         * Initialize Google map, called from HTML.
-         * @return {function}
-         */
         switch (type) {
             case '/':
-                self.initMap = () => {
+                return self.initMap = () => {
                     let loc = {
                         lat: 40.722216,
                         lng: -73.987501
@@ -68,9 +68,8 @@ import DBHelper from "./dbhelper";
                     });
                     updateRestaurants();
                 };
-                break;
             case 'restaurant.html':
-                self.initMap = () => fetchRestaurantFromURL(
+                return self.initMap = () => fetchRestaurantFromURL(
                     (error, restaurant) => {
                         if (error) { // Got an error!
                             console.error(error);
@@ -84,7 +83,6 @@ import DBHelper from "./dbhelper";
                             DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
                         }
                     });
-                break;
         }
     };
     switch (routeChecker()[0]) {
