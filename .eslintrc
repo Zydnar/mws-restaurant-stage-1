@@ -11,8 +11,6 @@
     }
   },
   "parser": "babel-eslint",
-  "plugins": ["react"],
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "ecmaFeatures": {
     "arrowFunctions": true,
     "binaryLiterals": true,

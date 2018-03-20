@@ -163,7 +163,7 @@ export const createRestaurantHTML = (restaurant) => {
     container.innerHTML = `<li role="banner" aria-labelledby="${randomId}">
 <div id="${randomId}">
 ${createResponsiveImg(DBHelper.imageUrlForRestaurant(restaurant), restaurant.name)}
-<h1 role="heading">${restaurant.name}</h1>
+<h2 role="heading">${restaurant.name}</h2>
 <p>${restaurant.neighborhood}</p>
 <p>${restaurant.address}</p>
 </div>
