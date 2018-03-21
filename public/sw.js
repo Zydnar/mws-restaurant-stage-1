@@ -21,6 +21,7 @@ addEventListener('install', function (event) {
                   return cache.addAll(
                       [
                           '/',
+                          '/index.html',
                           '/sw.js',
                           '/js/main.js',
                           '/css/styles.css',
