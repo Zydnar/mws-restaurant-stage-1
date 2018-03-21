@@ -3,7 +3,7 @@
 @import "compass";
 
 /* ====================== Navigation ====================== */
-nav {
+nav[role="navigation"] {
   width: 100%;
   height: 80px;
   background-color: get_map_item($black, 'Faded');
