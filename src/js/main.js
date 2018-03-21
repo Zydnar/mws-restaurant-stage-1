@@ -162,7 +162,7 @@ export const createRestaurantHTML = (restaurant) => {
     const randomId = 'n' + String(Math.random()).split('.')[1];
     container.innerHTML = `<li role="banner" aria-labelledby="${randomId}">
 <div id="${randomId}">
-${createResponsiveImg(DBHelper.imageUrlForRestaurant(restaurant), `${restaurant.name} restaurant photo`)}
+${createResponsiveImg(DBHelper.imageUrlForRestaurant(restaurant), `Image of ${restaurant.name} restaurant`)}
 <h2 role="heading">${restaurant.name}</h2>
 <p>${restaurant.neighborhood}</p>
 <p>${restaurant.address}</p>

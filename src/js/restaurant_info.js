@@ -41,7 +41,7 @@ export const fillRestaurantHTML = (restaurant = self.restaurant) => {
     address.innerHTML = restaurant.address;
 
     const image = document.getElementById('restaurant-img');
-    image.outerHTML = createResponsiveImg(DBHelper.imageUrlForRestaurant(restaurant), `Image of ${restaurant.name}`);
+    image.outerHTML = createResponsiveImg(DBHelper.imageUrlForRestaurant(restaurant), `Image of ${restaurant.name} restaurant`);
     const img = document.getElementsByClassName('restaurant-img')[1];
     img.id = 'restaurant-img';
 
