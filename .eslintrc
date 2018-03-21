@@ -1,4 +1,4 @@
-{
+{// based on https://gist.github.com/nkbt/9efd4facb391edbf8048
   "env": {
     "browser": true,
     "node": true,
