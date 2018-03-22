@@ -8,9 +8,9 @@
 ### Instructions
 #### For view only 
 0. Clone repo
-    ```
-    git clone https://github.com/Zydnar/mws-restaurant-stage-1.git
-    ```
+     ```
+     git clone https://github.com/Zydnar/mws-restaurant-stage-1.git
+     ```
 1. Set your working directory to /public folder inside project
     ```
     $ cd ./public
@@ -39,3 +39,4 @@
     ```
     npm install
     ```
+> Note: Gulp responsive-images task reqires 3-rd party binaries added to your $path. Decide upon [Q8 or Q16](http://www.graphicsmagick.org/INSTALL-windows.html#retrieve-install-package): A Q8 version is fine for processing typical photos intended for viewing on a computer screen. If you are dealing with film, scientific, or medical images, use ICC color profiles, or deal with images that have limited contrast, then the Q16 version is recommended. [Download](http://www.graphicsmagick.org/download.html/) and Install, be sure that "Update executable search path" is checked  during installation.
