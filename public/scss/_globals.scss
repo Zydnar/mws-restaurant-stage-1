@@ -4,11 +4,13 @@
 * {
   @include box-sizing(border-box);
 }
-button, [role="button"], [role="link"], a, select{
+
+button, [role="button"], [role="link"], a, select {
   &:focus {
-    @include box-shadow(0 0 0 2px rgba(2,117,216,.5));
+    @include box-shadow(0 0 0 2px rgba(2, 117, 216, .5));
   }
 }
+
 a {
   color: get_map_item($orange, 'Orange');
   text-decoration: none;
@@ -25,6 +27,10 @@ ul, li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #333;
+}
+
+table {
+  text-align: left;
 }
 
 body {
@@ -64,7 +70,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .inside {
 
     #breadcrumb {
@@ -82,22 +88,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
     header {
       position: relative !important;
     }
-    #map-container {
-      width: 100% !important;
-      position: relative !important;
-      height: 100vh !important;
-      top: 0 !important;
-    }
-    #restaurant-container, #reviews-container {
-      width: 100% !important;
-    }
-    #reviews-container h2 {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    #footer {
-      width: 100% !important;
-    }
     #restaurant-container h1, #restaurant-container p:nth-of-type(2), #restaurant-container table {
       padding: 0 17px !important;
     }
@@ -114,13 +104,19 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
     }
   }
   .inside {
-
     #restaurant-container, #reviews-container {
-      padding: 0 !important;
+      padding: 0 10px !important;
+      width: 100% !important;
     }
-
+    #map-container {
+      height: calc(100vh - 130px) !important;
+      width: 100% !important;
+      position: relative !important;
+      top: 0 !important;
+    }
     #footer {
       position: relative !important;
+      width: 100% !important;
     }
   }
 }
@@ -135,11 +131,50 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
     }
   }
   .inside {
+    #restaurant-container {
+      padding-top: 130px !important;
+    }
     #restaurant-img {
       width: 100% !important;
     }
     #restaurant-cuisine {
       width: 100% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 671px) {
+  .inside {
+    #map-container {
+      width: 100% !important;
+      position: relative !important;
+      height: calc(100vh - 130px) !important;
+      top: 0 !important;
+    }
+    #breadcrumb {
+      width: 100% !important;
+    }
+    #maincontent {
+      padding-top: 132px;
+    }
+    #restaurant-container, #reviews-container {
+      width: 100% !important;
+    }
+    #reviews-container h2 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    #footer {
+      position: relative !important;
+      width: 100% !important;
+    }
+  }
+}
+
+@media screen and (min-width: 672px) {
+  .inside {
+    #restaurant-container {
+      padding-top: 130px !important;
     }
   }
 }
@@ -154,7 +189,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   }
 }
 
-@media screen and (min-width: 720px){
+@media screen and (min-width: 720px) {
   #filter-results {
     .filter-options {
       display: table !important;

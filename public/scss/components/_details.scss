@@ -34,18 +34,23 @@
   padding: $restaurant_cousine_padding_vertical 0;
   text-align: center;
   text-transform: uppercase;
-  width: 90%;
+  width: 100%;
 }
-
+#restaurant-container {
+  text-align: center;
+  & p:nth-of-type(2) {
+    text-align: left;
+  }
+}
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid get_map_item($white, 'Gray');
   border-top: 1px solid get_map_item($white, 'White');
-  padding: 140px 40px 30px;
+  padding: 14px 10px 30px;
   width: 50%;
 }
 
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding: 30px 40px 40px;
   & h2 {
     color: get_map_item($orange, 'darkOrange');
     font-size: 24pt;
